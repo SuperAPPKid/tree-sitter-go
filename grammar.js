@@ -551,9 +551,17 @@ module.exports = grammar({
       field('consequence', $.block),
       optional(seq(
         'else',
-        field('alternative', choice($.block, $.if_statement)),
+        field('alternative', choice($.else_clause, $.if_statement)),
       )),
     ),
+
+    else_clause: ($) =>
+      seq(
+        '{',
+        optional($._statement_list),
+        '}',
+      ),
+
 
     for_statement: $ => seq(
       'for',
