@@ -2789,7 +2789,7 @@
                     "members": [
                       {
                         "type": "SYMBOL",
-                        "name": "block"
+                        "name": "else_clause"
                       },
                       {
                         "type": "SYMBOL",
@@ -2804,6 +2804,31 @@
               "type": "BLANK"
             }
           ]
+        }
+      ]
+    },
+    "else_clause": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "statement_list"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "}"
         }
       ]
     },

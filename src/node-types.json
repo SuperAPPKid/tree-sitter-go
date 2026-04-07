@@ -801,6 +801,21 @@
     "fields": {}
   },
   {
+    "type": "else_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "statement_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "empty_statement",
     "named": true,
     "fields": {}
@@ -1246,7 +1261,7 @@
         "required": false,
         "types": [
           {
-            "type": "block",
+            "type": "else_clause",
             "named": true
           },
           {
